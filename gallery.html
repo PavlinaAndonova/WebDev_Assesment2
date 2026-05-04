@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Planetarium</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Space Gallery</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planets/index.html">Planets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Click a Planet</h2>
+
+        <div class="gallery">
+
+            <img src="./images/Mercury_1.jpg.png" alt="Mercury" onclick="showInfo('mercury')">
+            <img src="./images/Earth_1.jpg" alt="Earth" onclick="showInfo('earth')">
+            <img src="./images/Saturn_1.avif" alt="Saturn" onclick="showInfo('saturn')">
+            <img src="./images/Neptune_1.jpg" alt="Neptune" onclick="showInfo('neptune')">
+            <img src="./images/Jupiter_1.jpeg" alt="Jupiter" onclick="showInfo('jupiter')">
+            <img src="./images/Earth_4.webp" alt="Earth" onclick="showInfo('earth')">
+            <img src="./images/Venus_3.jpeg" alt="Venus" onclick="showInfo('venus')">
+            <img src="./images/Uranus_main.jpeg" alt="Uranus" onclick="showInfo('uranus')">
+            <img src="./images/Saturn_3.jpg" alt="Saturn" onclick="showInfo('saturn')">
+            <img src="./images/Mercury_2.jpg" alt="Mercury" onclick="showInfo('mercury')">
+            <img src="./images/Jupiter_2.jpg" alt="Jupiter" onclick="showInfo('jupiter')">
+            <img src="./images/Uranus_2.jpg" alt="Uranus" onclick="showInfo('uranus')">
+            <img src="./images/Neptune_3.jpg" alt="Neptune" onclick="showInfo('neptune')">
+            <img src="./images/Saturn_2.jpg.webp" alt="Saturn" onclick="showInfo('saturn')">
+            <img src="./images/Mars_main.jpg" alt="Mars" onclick="showInfo('mars')">
+            <img src="./images/Venus_1.jpg.webp" alt="Venus" onclick="showInfo('venus')">
+            <img src="./images/Earth_2jpg.avif" alt="Earth" onclick="showInfo('earth')">
+            <img src="./images/Mercury_3.jpg" alt="Mercury" onclick="showInfo('mercury')">
+            <img src="./images/Mars_1.jpg" alt="Mars" onclick="showInfo('mars')">
+            <img src="./images/Jupiter_3.jpg.webp" alt="Jupiter" onclick="showInfo('jupiter')">
+            <img src="./images/Venus_2.jpg" alt="Venus" onclick="showInfo('venus')">
+            <img src="./images/Uranus_1.png.webp" alt="Uranus" onclick="showInfo('uranus')">
+            <img src="./images/Neptune_2.jpg" alt="Neptune" onclick="showInfo('neptune')">
+
+        </div>
+    </section>
+
+    <!-- Popup info box -->
+    <div id="popup" class="popup" onclick="closePopup()">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <span onclick="closePopup()" class="close">&times;</span>
+            <p id="popup-text"></p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Milky Way Planetarium</p>
+</footer>
+
+</body>
+</html>

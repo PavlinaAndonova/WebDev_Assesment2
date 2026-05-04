@@ -1,0 +1,315 @@
+/* Reset some default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Background image */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgba(255, 221, 0, 0.765);
+
+    min-height: 100vh; /* 🔥 ensures full screen height */
+
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("../images/SolarSystem_main.jpg"); /* 🔥 IMPORTANT FIX */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Only apply sticky footer to planets page */
+body.planets-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.planets-page main {
+    flex: 1;
+}
+/* Planets list styled like navigation */
+.planets-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+
+    display: flex;              /* 🔥 makes items horizontal */
+    justify-content: center;    /* center them */
+    gap: 20px;                  /* spacing */
+}
+
+.planets-list a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.planets-list a:hover {
+    text-decoration: underline;
+}
+/* ⚪ Mercury */
+body.mercury section {
+    border: 3px solid #cccccc;
+    box-shadow: 0 0 15px rgba(200, 200, 200, 0.5);
+}
+body.mercury h1 { color: #cccccc;}
+body.mercury h2 { margin-top: 20px;}
+
+/* 🟡 Venus */
+body.venus section {
+    border: 2px solid #ff0084;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+body.venus h1 { color: rgb(255, 0, 140); }
+body.venus h2 { margin-top: 20px;}
+
+/* 🌍 Earth */
+body.earth section {
+    border: 2px solid #4caf50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+body.earth h1 { color: #4caf50; }
+body.earth h2 { margin-top: 20px;}
+
+/* 🔴 Mars */
+body.mars section {
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+}
+body.mars h1 { color: #ff4d4d; }
+body.mars h2 { margin-top: 20px;}
+
+/* 🟠 Jupiter */
+body.jupiter section {
+    border: 2px solid #ffb347;
+    box-shadow: 0 0 15px rgba(255, 179, 71, 0.5);
+}
+body.jupiter h1 { color: #ffb347; }
+body.jupiter h2 { margin-top: 20px;}
+
+/* 🟤 Saturn */
+body.saturn section {
+    border: 2px solid #d2b48c;
+    box-shadow: 0 0 15px rgba(210, 180, 140, 0.5);
+}
+body.saturn h1 { color: #d2b48c; }
+body.saturn h2 { margin-top: 20px;}
+
+/* 🔵 Uranus */
+body.uranus section {
+    border: 2px solid #4fd1ff;
+    box-shadow: 0 0 15px rgba(79, 209, 255, 0.5);
+}
+body.uranus h1 { color: #4fd1ff; }
+body.uranus h2 { margin-top: 20px;}
+
+/* 🔵 Neptune */
+body.neptune section {
+    border: 2px solid #3f51ff;
+    box-shadow: 0 0 15px rgba(63, 81, 255, 0.5);
+}
+body.neptune h1 { color: #3f51ff; }
+body.neptune h2 { margin-top: 20px;}
+
+
+.planet-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.planet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+    border-radius: 12px;
+
+    background: rgba(15, 20, 50, 0.85);
+    border: 1px solid rgba(0, 217, 255, 0.3);
+
+    text-decoration: none;
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.planet-item:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 217, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+.planet-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00d9ff;
+}
+
+.planet-tag {
+    font-size: 14px;
+    opacity: 0.8;
+    background: rgba(0, 217, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Popup background */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup box */
+.popup-content {
+    background: #111a3a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    color: white;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 30px;
+    text-align: center;
+    
+}
+ 
+h1 {
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 40px;
+    color: rgba(255, 221, 0, 0.765);
+}
+
+p{
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+ 
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+ 
+nav ul li {
+    display: inline;
+    margin: 30px;
+}
+ 
+nav a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+nav a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(20, 25, 60, 0.8);
+    margin: 8px 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border-left: 4px solid #00d9ff;
+}
+ 
+/* Main content */
+main {
+    padding: 60px 40px;
+    text-align: center;
+}
+ 
+section {
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 5px 10px;
+    background: #00d9ff;
+    border:#3f51ff;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #009ec2;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+ 
+/* Video styling */
+iframe {
+    max-width: 100%;
+    border: none;
+}
+ 
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+ 
