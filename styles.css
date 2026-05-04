@@ -14,7 +14,7 @@ body {
 
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("../images/SolarSystem_main.jpg"); /* 🔥 IMPORTANT FIX */
+        url("./images/SolarSystem_main.jpg"); /* 🔥 IMPORTANT FIX */
 
     background-size: cover;
     background-position: center;
